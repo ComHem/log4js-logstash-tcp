@@ -1,4 +1,5 @@
 const { TcpConnectionPool } = require("./TcpConnectionPool");
+const { version, name } = require("../package.json");
 
 function logstashTCP(config) {
   const type = config.logType ? config.logType : config.category;
@@ -57,6 +58,7 @@ function logstashTCP(config) {
       message: loggingEvent.data.map(formatData).join(" "),
       level: loggingEvent.level.levelStr,
       category: loggingEvent.categoryName,
+      appender: `${name}@${version}`,
       ...fields,
     });
   }
