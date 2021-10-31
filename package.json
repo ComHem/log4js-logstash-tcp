@@ -2,7 +2,7 @@
   "name": "@tele2se/log4js-logstash-tcp",
   "version": "0.0.1",
   "author": "Tele2 Sermo",
-  "description": "This is a copy of the logstashUDP appender but instead sending via UDP send via TCP to avoid the maximum 64k bytes message size with the logstashUDP appender.",
+  "description": "log4js logstash TCP appender.",
   "keywords": [
     "logstash",
     "log4js",
@@ -12,6 +12,9 @@
     {
       "name": "Sebastian Lagemann",
       "email": "sebastian@aigent.com"
+    },
+    {
+      "name": "lenkan"
     }
   ],
   "licenses": [
@@ -29,6 +32,9 @@
     "async-retry": "^1.3.3",
     "jest": "^27.3.1",
     "log4js": "^6.3.0"
+  },
+  "peerDependencies": {
+    "log4js": "^6.0.0"
   },
   "scripts": {
     "test": "jest"
